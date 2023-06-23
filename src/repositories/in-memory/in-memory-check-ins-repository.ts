@@ -65,7 +65,7 @@ export class InMemoryCheckInsRepository implements CheckInsRepository {
     return checkInsCount
   }
 
-  async save(checkIn: CheckIn) {
+  async update(checkIn: CheckIn) {
     const checkInIndex = this.items.findIndex((item) => item.id === checkIn.id)
     const CHECK_IN_EXISTS = checkInIndex >= 0
 

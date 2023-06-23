@@ -21,8 +21,8 @@ export class InMemoryGymsRepository implements GymsRepository {
     return gym
   }
 
-  async findById(gymId: string) {
-    const gym = this.items.find((item) => item.id === gymId)
+  async findById(id: string) {
+    const gym = this.items.find((item) => item.id === id)
 
     if (!gym) {
       return null
